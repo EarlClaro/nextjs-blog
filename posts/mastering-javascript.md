@@ -14,10 +14,11 @@ For example, you should understand code like this:
 const basics = 'Okay, that should not be too difficult actually';
 
 function printBasics() {
-  console.log(basics):
+  console.log(basics);
 }
 
 printBasics();
+
 ```
 
 Learn more about it [here](https://academind.com).
