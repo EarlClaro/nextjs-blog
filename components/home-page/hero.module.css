@@ -28,13 +28,113 @@
 .hero h1 {
   font-size: var(--size-16);
   margin: var(--size-4) 0;
-  color: var(--color-grey-300);
+  color: white;
 }
 
 .hero p {
-  font-size: var(--size-6);
-  color: var(--color-grey-200);
+  font-size: var(--size-5);
+  color: white;
   width: 90%;
-  max-width: 40rem;
-  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  display: block;
+  text-align: justify;
+
+}
+
+
+/* Social Icons Container */
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: -1rem;
+  
+}
+
+/* Individual Icon Styling */
+.icon {
+  font-size: 1.8rem;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  transition: color 0.3s ease, transform 0.3s ease;
+  color: white; /* Color of the icon inside the circle */
+  border-radius: 50%;
+  padding: 12px;
+
+}
+
+/* Icon Hover Effect */
+.icon:hover {
+  color: gold; /* Change icon color on hover */
+  transform: scale(1.1);
+}
+
+/* Typing Effect Styling */
+.typingText {
+  margin-bottom: 1rem;
+  margin-top: -.1rem;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.typingText span {
+  position: relative;
+}
+
+.typingText span::before {
+  content: "Software Developer";
+  color: gold;
+  animation: words 20s infinite, typing 2s steps(20) 0.5s 1 normal both;
+}
+
+.typingText span::after {
+  content: "";
+  position: absolute;
+  right: 5;
+  width: 6px;
+  height: 100%;
+  border-left: 3px solid black;
+  animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+  100% {
+    border-left-color: gold;
+  }
+}
+
+@keyframes words {
+  0%, 20% {
+    content: "Aspiring Web Developer";
+  }
+  21%, 40% {
+    content: "AI Enthusiast";
+  }
+  41%, 60% {
+    content: "Forever Curious";
+  }
+  61%, 80% {
+    content: "Life Long Learner";
+  }
+  81%, 100% {
+    content: "Gamer";
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
